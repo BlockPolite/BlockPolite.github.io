@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockPolite — Военно-политический Minecraft сервер</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+    <div class="copy-notification" id="copyNotification">✓ IP-адрес скопирован!</div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-logo">
+            <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite">
+            <span>BlockPolite</span>
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" onclick="smoothScroll(event, 'about')">О сервере</a></li>
+            <li><a href="#concept" onclick="smoothScroll(event, 'concept')">Концепция</a></li>
+            <li><a href="#features" onclick="smoothScroll(event, 'features')">Возможности</a></li>
+            <li><a href="#rules" onclick="smoothScroll(event, 'rules')">Правила</a></li>
+            <li><a href="#donate" onclick="smoothScroll(event, 'donate')">Донат</a></li>
+            <li><a href="#join" class="btn btn-primary" style="padding:10px 22px;font-size:13px;" onclick="smoothScroll(event, 'join')">🎮 Играть</a></li>
+        </ul>
+        <div class="nav-hamburger" id="hamburger" onclick="toggleNav()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Военно-политический сервер
+            </div>
+            <br>
+            <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite" class="hero-logo-big">
+            <h1><span class="highlight">Block</span>Polite</h1>
+            <p class="hero-subtitle">
+                Военно-политический Minecraft сервер с настоящей картой Земли.
+                Создавай города, основывай государства, веди войны и дипломатию!
+            </p>
+            <div class="hero-ip-box" onclick="copyIP()" title="Нажмите, чтобы скопировать">
+                <div>
+                    <div class="ip-label">IP-адрес сервера</div>
+                    <div class="ip-address">blockPolite.join-mc.com</div>
+                </div>
+                <span class="copy-icon">📋</span>
+            </div>
+            <br><br>
+            <div class="hero-buttons">
+                <a href="#join" class="btn btn-primary" onclick="smoothScroll(event, 'join')">🎮 Начать играть</a>
+                <a href="#about" class="btn btn-outline" onclick="smoothScroll(event, 'about')">🌍 Узнать больше</a>
+            </div>
+            <div class="earth-stats">
+                <div class="earth-stat animate-on-scroll">
+                    <span class="earth-stat-icon">🌍</span>
+                    <span class="earth-stat-number">1:500</span>
+                    <span class="earth-stat-label">Масштаб карты</span>
+                </div>
+                <div class="earth-stat animate-on-scroll">
+                    <span class="earth-stat-icon">🏙️</span>
+                    <span class="earth-stat-number">∞</span>
+                    <span class="earth-stat-label">Городов</span>
+                </div>
+                <div class="earth-stat animate-on-scroll">
+                    <span class="earth-stat-icon">⚔️</span>
+                    <span class="earth-stat-number">24/7</span>
+                    <span class="earth-stat-label">Войны</span>
+                </div>
+                <div class="earth-stat animate-on-scroll">
+                    <span class="earth-stat-icon">🤝</span>
+                    <span class="earth-stat-number">∞</span>
+                    <span class="earth-stat-label">Дипломатия</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-image animate-on-scroll">
+                    <div class="earth-map-visual"></div>
+                    <div class="floating-badge">
+                        <div class="fb-version">1.20.1 — 1.21+</div>
+                        <div class="fb-label">Поддерживаемые версии</div>
+                    </div>
+                </div>
+                <div class="about-text animate-on-scroll">
+                    <div class="section-tag">О сервере</div>
+                    <h3>Реальная <span class="text-red">политика</span> в мире блоков</h3>
+                    <p><strong>BlockPolite</strong> — военно-политический сервер с настоящей картой Земли. Здесь ты создаёшь города, основываешь государства, участвуешь в войнах и выстраиваешь дипломатические отношения с другими игроками.</p>
+                    <p>Выбирай существующую нацию или создай свою собственную. Строй и развивай свою империю на знакомом тебе глобусе. Каждое твоё решение влияет на судьбу целого мира!</p>
+                    <div class="about-highlights">
+                        <div class="about-highlight-item"><span class="ahi-icon">🗺️</span><span>Настоящая карта Земли</span></div>
+                        <div class="about-highlight-item"><span class="ahi-icon">🏛️</span><span>Система государств</span></div>
+                        <div class="about-highlight-item"><span class="ahi-icon">⚔️</span><span>Войны и сражения</span></div>
+                        <div class="about-highlight-item"><span class="ahi-icon">🤝</span><span>Дипломатия и альянсы</span></div>
+                        <div class="about-highlight-item"><span class="ahi-icon">🏙️</span><span>Основатель города</span></div>
+                        <div class="about-highlight-item"><span class="ahi-icon">🌐</span><span>Реальные национальности</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="war-banner animate-on-scroll">
+                <span class="war-banner-icon">⚔️</span>
+                <div class="war-banner-text">
+                    <h4>Основатель города — главный режим сервера</h4>
+                    <p>Создавай свой город на реальной карте Земли, набирай жителей, развивай экономику, заключай союзы или объявляй войну соседям. Стань лидером, который изменит историю!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section id="concept">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag">Концепция</div>
+                <h2 class="section-title">Как устроен мир</h2>
+                <p class="section-desc">Полноценная геополитическая симуляция в мире Minecraft</p>
+            </div>
+            <div class="concept-grid">
+                <div class="concept-card animate-on-scroll">
+                    <div class="concept-icon">🏙️</div>
+                    <h3>Создание городов</h3>
+                    <p>Основывай города в любой точке карты Земли. Застраивай территорию, привлекай жителей, развивай инфраструктуру и превращай деревню в мегаполис.</p>
+                </div>
+                <div class="concept-card animate-on-scroll">
+                    <div class="concept-icon">🏛️</div>
+                    <h3>Государства и нации</h3>
+                    <p>Объединяй города в государства, выбирай форму правления, назначай министров и управляй целой нацией.</p>
+                </div>
+                <div class="concept-card animate-on-scroll">
+                    <div class="concept-icon">⚔️</div>
+                    <h3>Войны и сражения</h3>
+                    <p>Объявляй войну, захватывай территории, защищай свои земли. Продуманная система войн с осадами, тактикой и стратегией.</p>
+                </div>
+                <div class="concept-card animate-on-scroll">
+                    <div class="concept-icon">🤝</div>
+                    <h3>Дипломатия</h3>
+                    <p>Заключай союзы, торговые договоры, пакты о ненападении. Выстраивай отношения с другими государствами.</p>
+                </div>
+                <div class="concept-card animate-on-scroll">
+                    <div class="concept-icon">💰</div>
+                    <h3>Экономика</h3>
+                    <p>Развитая экономическая система с торговлей, налогами, банками. Контролируй ресурсы и стань сверхдержавой.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag">Возможности</div>
+                <h2 class="section-title">Почему BlockPolite?</h2>
+                <p class="section-desc">Техническое совершенство для лучшего геймплея</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-text"><h4>Мощная анти-чит система</h4><p>Продвинутая защита от читеров обеспечивает честную игру для всех.</p></div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-text"><h4>Высокий TPS</h4><p>Мощное серверное оборудование гарантирует стабильные 20 TPS без лагов.</p></div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🏙️</div>
+                    <div class="feature-text"><h4>Система городов</h4><p>Продуманная система создания и управления городами с территориями и экономикой.</p></div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🌍</div>
+                    <div class="feature-text"><h4>Красивый мир</h4><p>Детализированная карта Земли с реальными ландшафтами, горами и океанами.</p></div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">⚔️</div>
+                    <div class="feature-text"><h4>Система войн</h4><p>Полноценная военная система с осадами, захватом территорий и мирными договорами.</p></div>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-text"><h4>Дипломатические отношения</h4><p>Союзы, торговые соглашения, альянсы и пакты между государствами.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag">Подключение</div>
+                <h2 class="section-title">Как начать играть?</h2>
+                <p class="section-desc">Стань частью мировой политики за 4 простых шага</p>
+            </div>
+            <div class="join-steps">
+                <div class="join-step animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <span class="step-icon">🎮</span>
+                    <h4>Запусти Minecraft</h4>
+                    <p>Открой Minecraft Java Edition версии 1.20.1 или выше</p>
+                </div>
+                <div class="join-step animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <span class="step-icon">🌐</span>
+                    <h4>Добавь сервер</h4>
+                    <p>Перейди в «Мультиплеер» → «Добавить сервер» и введи IP: <strong style="color:var(--red-light)">blockPolite.join-mc.com</strong></p>
+                </div>
+                <div class="join-step animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <span class="step-icon">📝</span>
+                    <h4>Зарегистрируйся</h4>
+                    <p>При первом входе: <strong style="color:var(--red-light)">/register пароль пароль</strong></p>
+                </div>
+                <div class="join-step animate-on-scroll">
+                    <div class="step-number">4</div>
+                    <span class="step-icon">🏙️</span>
+                    <h4>Основай город!</h4>
+                    <p>Выбери место на карте Земли и начни строить свою империю!</p>
+                </div>
+            </div>
+            <div style="text-align:center" class="animate-on-scroll">
+                <div class="hero-ip-box" onclick="copyIP()">
+                    <div>
+                        <div class="ip-label">IP-адрес сервера</div>
+                        <div class="ip-address">blockPolite.join-mc.com</div>
+                    </div>
+                    <span class="copy-icon">📋</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RULES -->
+    <section id="rules">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag">Правила</div>
+                <h2 class="section-title">Правила сервера</h2>
+                <p class="section-desc">Для комфортной игры соблюдай основные правила</p>
+            </div>
+            <div class="rules-list">
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">1</div>
+                        <span class="rule-title">Запрещено использование читов и модификаций</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Использование любых читов, хаков, багов и нечестных модификаций строго запрещено. Разрешены: OptiFine, мини-карты без пещер, шейдеры. Наказание: перманентный бан.</div></div>
+                </div>
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">2</div>
+                        <span class="rule-title">Уважайте других игроков</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Оскорбления, травля, дискриминация и токсичное поведение запрещены. Наказание: мут от 1 часа до перманентного бана.</div></div>
+                </div>
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">3</div>
+                        <span class="rule-title">Запрещена реклама сторонних ресурсов</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Реклама других серверов, сайтов, Discord-серверов без разрешения администрации запрещена. Наказание: перманентный бан.</div></div>
+                </div>
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">4</div>
+                        <span class="rule-title">Запрещены неприемлемые ники и скины</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Никнеймы и скины с нецензурным содержанием недопустимы. Наказание: кик до смены ника/скина.</div></div>
+                </div>
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">5</div>
+                        <span class="rule-title">Торговля за реальные деньги запрещена</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Продажа или покупка игровых предметов за реальные деньги вне официального магазина запрещена. Наказание: перманентный бан.</div></div>
+                </div>
+                <div class="rule-item animate-on-scroll">
+                    <div class="rule-header" onclick="toggleRule(this)">
+                        <div class="rule-number">6</div>
+                        <span class="rule-title">Войны ведутся по правилам сервера</span>
+                        <span class="rule-toggle">▼</span>
+                    </div>
+                    <div class="rule-body"><div class="rule-body-inner">Все военные действия через систему войн сервера. Гриферство без военного конфликта — бан и откат территории.</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATE -->
+    <section id="donate">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-tag">Поддержка</div>
+                <h2 class="section-title">Магазин сервера</h2>
+                <p class="section-desc">Поддержи сервер и получи уникальные возможности</p>
+            </div>
+            <div class="donate-card animate-on-scroll">
+                <div class="donate-glow"></div>
+                <span class="donate-icon">👑</span>
+                <h3>Донат-привилегии</h3>
+                <p>Приобретай уникальные привилегии и бонусы в нашем официальном магазине. Все средства идут на развитие сервера!</p>
+                <div class="donate-perks">
+                    <div class="donate-perk"><span class="dp-icon">⭐</span><span>Уникальные привилегии</span></div>
+                    <div class="donate-perk"><span class="dp-icon">🏷️</span><span>Уникальные префиксы</span></div>
+                    <div class="donate-perk"><span class="dp-icon">🎁</span><span>Бонусные наборы</span></div>
+                    <div class="donate-perk"><span class="dp-icon">🏠</span><span>Доп. дома и участки</span></div>
+                    <div class="donate-perk"><span class="dp-icon">💎</span><span>Эксклюзивный контент</span></div>
+                </div>
+                <div class="donate-btn-wrapper">
+                    <a href="https://bsp.trademc.org/" target="_blank" class="btn-donate-big">🛒 Перейти в магазин</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="nav-logo" onclick="smoothScroll(event, 'hero')">
+                    <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite">
+                    <span>BlockPolite</span>
+                </a>
+                <p>Военно-политический Minecraft сервер с настоящей картой Земли. Создавай города, основывай государства и пиши свою историю!</p>
+                <div class="footer-social">
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="VK">🔵</a>
+                    <a href="#" title="Telegram">✈️</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#about" onclick="smoothScroll(event,'about')">О сервере</a></li>
+                    <li><a href="#concept" onclick="smoothScroll(event,'concept')">Концепция</a></li>
+                    <li><a href="#features" onclick="smoothScroll(event,'features')">Возможности</a></li>
+                    <li><a href="#join" onclick="smoothScroll(event,'join')">Как играть</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Сервер</h4>
+                <ul>
+                    <li><a href="#rules" onclick="smoothScroll(event,'rules')">Правила</a></li>
+                    <li><a href="#donate" onclick="smoothScroll(event,'donate')">Донат</a></li>
+                    <li><a href="https://bsp.trademc.org/" target="_blank">Магазин</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Информация</h4>
+                <ul>
+                    <li><a href="https://minecraftrating.ru/server/blockpolite/" target="_blank"><span class="link-icon">📊</span> MinecraftRating</a></li>
+                    <li><a href="https://top-minecrafter.com/server/blockpolite/" target="_blank"><span class="link-icon">🏆</span> Top-Minecrafter</a></li>
+                    <li><a href="https://bsp.trademc.org/" target="_blank"><span class="link-icon">🛒</span> TradeMC Магазин</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 <a href="#">BlockPolite</a>. Все права защищены.</p>
+            <p>IP: <a href="#" onclick="copyIP(); return false;">blockPolite.join-mc.com</a> | 1.20.1 — 1.21+</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+    <div id="_bp_shield" style="display:none"></div>
+    <script src="script.js"></script>
+</body>
+</html>
