@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockPolite — Военно-политический Minecraft сервер</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/jpeg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,8 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a href="#hero" class="nav-logo">
-            <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite">
+            <img src="logo.png" alt="BlockPolite"
+                 onerror="this.src='https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg'">
             <span>BlockPolite</span>
         </a>
         <ul class="nav-links" id="navLinks">
@@ -41,7 +42,8 @@
                 Военно-политический сервер
             </div>
             <br>
-            <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite" class="hero-logo-big">
+            <img src="logo.png" alt="BlockPolite" class="hero-logo-big"
+                 onerror="this.src='https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg'">
             <h1><span class="highlight">Block</span>Polite</h1>
             <p class="hero-subtitle">
                 Военно-политический Minecraft сервер с настоящей картой Земли.
@@ -89,10 +91,37 @@
         <div class="section-container">
             <div class="about-grid">
                 <div class="about-image animate-on-scroll">
-                    <div class="earth-map-visual"></div>
+                    <div class="video-wrapper" id="videoWrapper">
+                        <iframe id="ytPlayer" class="video-frame active"
+                            src="https://www.youtube.com/embed/aiQdLP2mBJE?autoplay=1&mute=1&loop=1&playlist=aiQdLP2mBJE&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                        <iframe id="vkPlayer" class="video-frame" src="" frameborder="0"
+                            allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock"
+                            allowfullscreen loading="lazy"></iframe>
+                        <iframe id="rtPlayer" class="video-frame" src="" frameborder="0"
+                            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                            allowfullscreen loading="lazy"></iframe>
+                        <div id="emojiFallback" class="video-frame earth-map-visual-fallback">
+                            <span class="emoji-earth">🌍</span>
+                            <div class="fallback-text">
+                                <span>BlockPolite</span>
+                                <small>Карта Земли в Minecraft</small>
+                            </div>
+                        </div>
+                        <div class="video-loader" id="videoLoader">
+                            <div class="loader-spinner"></div>
+                            <span>Загрузка видео...</span>
+                        </div>
+                    </div>
                     <div class="floating-badge">
                         <div class="fb-version">1.20.1 — 1.21+</div>
                         <div class="fb-label">Поддерживаемые версии</div>
+                    </div>
+                    <div class="video-source-badge" id="videoSourceBadge">
+                        <span class="vsb-dot"></span>
+                        <span id="videoSourceText">YouTube</span>
                     </div>
                 </div>
                 <div class="about-text animate-on-scroll">
@@ -214,7 +243,7 @@
                     <div class="step-number">2</div>
                     <span class="step-icon">🌐</span>
                     <h4>Добавь сервер</h4>
-                    <p>Перейди в «Мультиплеер» → «Добавить сервер» и введи IP: <strong style="color:var(--red-light)">blockPolite.join-mc.com</strong></p>
+                    <p>«Мультиплеер» → «Добавить сервер» → IP: <strong style="color:var(--red-light)">blockPolite.join-mc.com</strong></p>
                 </div>
                 <div class="join-step animate-on-scroll">
                     <div class="step-number">3</div>
@@ -334,7 +363,8 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#hero" class="nav-logo" onclick="smoothScroll(event, 'hero')">
-                    <img src="https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg" alt="BlockPolite">
+                    <img src="logo.png" alt="BlockPolite"
+                         onerror="this.src='https://i.trademc.org/shops/C/p/CpkMkWQmDs.jpg'">
                     <span>BlockPolite</span>
                 </a>
                 <p>Военно-политический Minecraft сервер с настоящей картой Земли. Создавай города, основывай государства и пиши свою историю!</p>
@@ -371,13 +401,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 <a href="#">BlockPolite</a>. Все права защищены.</p>
+            <p>© 2024 — 2025 <a href="#">BlockPolite</a>. Все права защищены.</p>
             <p>IP: <a href="#" onclick="copyIP(); return false;">blockPolite.join-mc.com</a> | 1.20.1 — 1.21+</p>
         </div>
     </footer>
 
     <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-    <div id="_bp_shield" style="display:none"></div>
+
     <script src="script.js"></script>
+    <script src="video.js"></script>
 </body>
 </html>
